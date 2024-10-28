@@ -4,16 +4,27 @@
     "es2021": true,
     "node": true
   },
-  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "standard"],
+  "settings": {
+    "react": {
+      "version": "detect" // Automatically picks the version you have installed.
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended", // Pastikan untuk menambahkan ini
+    "standard"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
     "sourceType": "module",
-    "project": ["**/tsconfig.json"]
+    "project": ["./tsconfig.json"]
   },
-  "plugins": ["@typescript-eslint"],
+  "plugins": ["@typescript-eslint", "react"],
   "ignorePatterns": ["**/build/*", "**/node_modules/*", "**/public/*", "**/tsconfig.json"],
   "rules": {
-    "@typescript-eslint/restrict-template-expressions": "off"
+    // "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    // "@typescript-eslint/no-require-imports": "error"
   }
 }

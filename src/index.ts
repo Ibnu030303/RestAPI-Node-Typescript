@@ -1,10 +1,10 @@
-import express, { Application, Request, Response, NextFunction } from 'express'
+import express, { Application, Request, Response } from 'express'
 
 const app: Application = express()
-const port: number = 4000
+const port: number = 4001
 
-app.use('/health', (req: Request, res: Response, nex: NextFunction) => {
-  res.status(200).send({ status: '200', data: 'Hello Word' })
+app.use('/health', (req: Request, res: Response) => {
+  res.status(200).send({ status: '200' })
 })
 
-app.listen(port, () => console.log(`Servers Is Listening on port ${port}`))
+app.listen(port, () => console.log(`Server is listening on port ${port}`))
