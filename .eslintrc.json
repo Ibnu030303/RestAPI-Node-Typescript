@@ -6,15 +6,10 @@
   },
   "settings": {
     "react": {
-      "version": "detect" // Automatically picks the version you have installed.
+      "version": "detect"
     }
   },
-  "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:react/recommended", // Pastikan untuk menambahkan ini
-    "standard"
-  ],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended", "plugin:react/recommended"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -24,7 +19,11 @@
   "plugins": ["@typescript-eslint", "react"],
   "ignorePatterns": ["**/build/*", "**/node_modules/*", "**/public/*", "**/tsconfig.json"],
   "rules": {
-    // "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
-    // "@typescript-eslint/no-require-imports": "error"
+    // "@typescript-eslint/restrict-template-expressions": "off",
+    // "@typescript-eslint/explicit-function-return-type": "off",
+    // "@typescript-eslint/strict-boolean-expressions": "off",
+    // "no-return-assign": "off",
+    // "array-callback-return": "off",
+    // "@typescript-eslint/no-misused-promises": "off"
   }
 }

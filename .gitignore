@@ -1,10 +1,10 @@
 #dependecies
 /node_modules
 
-#testing
+# testing
 /coverage
 
-#production
+# production
 /build
 /dist
 
